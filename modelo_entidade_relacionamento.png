@@ -1,1 +1,33 @@
+## 📘 Modelo Entidade-Relacionamento
+
+![MER](modelo_entidade_relacionamento.png)
+
+### 🧍 Entidade: Cliente  
+- `id`: Identificador único  
+- `nome`: Nome do cliente  
+- `email`: E-mail de contato  
+- `telefone`: Número de telefone  
+
+### 📄 Entidade: Pedido  
+- `id`: Identificador do pedido  
+- `data`: Data da realização  
+- `valor_total`: Soma dos itens  
+- `id_cliente`: Referência ao cliente que realizou o pedido  
+
+### 📦 Entidade: Produto  
+- `id`: Identificador do produto  
+- `nome`: Nome do item  
+- `preco`: Valor unitário  
+- `estoque`: Quantidade disponível  
+
+### 🧾 Entidade: ItemPedido  
+- `id_pedido`: Referência ao pedido  
+- `id_produto`: Referência ao produto  
+- `quantidade`: Quantidade solicitada  
+- `preco_unitario`: Valor do produto no momento do pedido  
+
+### 🔗 Relacionamentos  
+- **Cliente realiza Pedido** (1:N)  
+- **Pedido contém Produto** (N:N) via `ItemPedido`
+
 
